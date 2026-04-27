@@ -1,3 +1,5 @@
+# PRD Generation Prompt
+
 You are generating an implementation PRD from research discoveries.
 
 ## Pre-synthesis
