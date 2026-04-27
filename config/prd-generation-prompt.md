@@ -3,6 +3,7 @@ You are generating an implementation PRD from research discoveries.
 ## Pre-synthesis
 
 First run these skills to gather context:
+
 1. /cc-meta:distilling-plan-learnings --time-range 7d
 2. /cc-meta:synthesizing-cc-bigpicture --time-range 7d
 
@@ -15,6 +16,7 @@ Check registry/index.json for active repos and their stacks.
 ## Selection
 
 Identify the top 3-5 discoveries that would benefit the contrib repos:
+
 - Uncovered CC features that enable new capabilities
 - Community patterns that solve known pain points
 - Research findings with concrete implementation paths
