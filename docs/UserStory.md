@@ -2,31 +2,40 @@
 
 ## Problem
 
-ai-agents-research monitors discover new CC features, community patterns,
-and ecosystem changes weekly. These discoveries are triaged but not
-automatically implemented as adoptions or integrations.
+ai-agents-research collects and triages new Claude Code features, community
+patterns, papers, best practices and ecosystem changes. These discoveries are
+triaged but not turned into improvements to the tooling we build with.
 
 ## Users
 
-- 9 contrib repos (SimpleAgents, compass-mcp, openclaude, etc.)
-- cc-utils-plugin (new skills from discoveries)
-- polyforge-orchestrator (new presets, integrations)
+- ralph-loop template (the target: every project started from it benefits)
 
 ## Value
 
-Automatically turn research discoveries into implementations:
-feature adoptions, new integrations, contribution PRs.
+Automatically turn research discoveries into tested improvements to the
+ralph-loop template, so it compounds *what's new*. Design:
+[template#32](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template/issues/32).
+
+## Feeds
+
+- ai-agents-research `triage/` (uncovered Claude Code features)
+- ai-agents-research `docs/learnings/cross-repo-digest.md`
+- `registry/index.json`
+
+External sources are collected upstream in ai-agents-research; this repo does
+not search the web itself.
 
 ## Stories
 
 - Read ai-agents-research/triage/ for uncovered features
 - Read ai-agents-research/docs/learnings/ for cross-repo patterns
-- Generate PRD with stories for highest-value implementations
+- Generate PRD with stories for highest-value template improvements
 - Implement via strict TDD (Red-Green-Refactor)
 - Write back novel learnings to ai-agents-research
 
 ## Constraints
 
 - Must not break existing functionality
-- Changes via fork+PR workflow (never direct push)
+- Uni-directional: changes land via pull request in this repo, never pushed to
+  the template; the owner picks good changes back (mechanism open in #32)
 - Max budget per weekly run: configurable via RALPH_MAX_ITERATIONS
