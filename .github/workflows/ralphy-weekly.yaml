@@ -17,20 +17,30 @@ jobs:
           submodules: recursive
 
       - name: Setup Claude Code
-        run: curl -fsSL https://claude.ai/install.sh | bash
+        run: curl -fsSL https://claude.ai/install.sh | bash -s 2.1.310
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Update ralph submodule
         run: |
           git submodule update --remote ralph
           git add ralph
           git diff --staged --quiet || git commit -m "chore: update ralph submodule"
+          echo "Template commit: $(git -C ralph rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Generate PRD from feeds
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           claude -p "$(cat config/prd-generation-prompt.md)" \
-            --max-turns 15 --output-format json
+            --max-turns 15 --max-budget-usd 5 \
+            --permission-mode bypassPermissions \
+            --output-format json > prd-run.json
+          echo "PRD step cost (USD): $(jq -r '.total_cost_usd' prd-run.json)" >> "$GITHUB_STEP_SUMMARY"
+          rm prd-run.json
 
       - name: Run Ralph Loop
         env:
