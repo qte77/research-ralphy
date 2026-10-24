@@ -1,13 +1,14 @@
 # research-ralphy
 
-Self-evolving ralph offspring that turns research discoveries into implementation
-PRDs for the contrib repos.
+Self-improvement offspring of the ralph-loop template (template#32): turns
+research discoveries into tested improvements for the template. Feeds, value and
+constraints: docs/UserStory.md.
 
 Uses ralph as a git submodule. Weekly cycle: discover -> select -> PRD -> TDD.
 
 The operative PRD-generation workflow lives in config/prd-generation-prompt.md:
 pre-synthesis via cc-meta skills, discovery from ai-agents-research, selection of
-the top 3-5 contrib-relevant findings, then docs/PRD.md plus generate_prd_json.py.
+the top 3-5 contrib-relevant findings (prompt still to be retargeted to the template), then docs/PRD.md plus generate_prd_json.py.
 
 ## Conventions
 
