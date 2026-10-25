@@ -1,7 +1,8 @@
 -include ralph/Makefile
 
 ralphy_generate_prd:  ## Generate PRD from feed sources
-	claude -p "$$(cat config/prd-generation-prompt.md)" --max-turns 15
+	claude -p "$$(cat config/prd-generation-prompt.md)" --max-turns 15 \
+		--max-budget-usd 5 --permission-mode bypassPermissions
 
 ralphy_evolve:  ## Full evolution cycle: generate PRD + run ralph
 	$(MAKE) ralphy_generate_prd
