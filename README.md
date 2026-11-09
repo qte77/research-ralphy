@@ -26,7 +26,8 @@ make ralphy_evolve   # generate PRD from research, then run the ralph loop
 ```
 
 Feeds, target and constraints: [docs/UserStory.md](docs/UserStory.md). PRD workflow:
-[config/prd-generation-prompt.md](config/prd-generation-prompt.md). Agent conventions: [AGENTS.md](AGENTS.md).
+[config/prd-generation-prompt.md](config/prd-generation-prompt.md). Secrets and `config/compound.env`
+variables: [docs/configuration.md](docs/configuration.md). Agent conventions: [AGENTS.md](AGENTS.md).
 
 ## Why
 

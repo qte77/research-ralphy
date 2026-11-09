@@ -7,6 +7,10 @@ The format is based on
 
 ## [Unreleased]
 
+### Fixed
+
+- `config/compound.env` paths can be overridden from the environment (`WORKSPACE_ROOT`, `CLAUDE_HOME` and each variable), instead of hard-coded Codespace paths that do not exist on Actions runners; `docs/configuration.md` documents them and the workflow secrets (#21).
+
 ### Added
 
 - `CHANGELOG.md` in Keep a Changelog format (#25).
