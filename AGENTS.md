@@ -15,3 +15,5 @@ the top 3-5 contrib-relevant findings (prompt still to be retargeted to the temp
 - Agent config is AGENTS.md-only; CLAUDE.md is a symlink to this file.
 - Claude Code plugins are configured in .claude/settings.json against the
   qte77-claude-code-plugins marketplace; shared rules live in .claude/rules/.
+- Non-trivial changes add an entry under `## [Unreleased]` in CHANGELOG.md
+  (Keep a Changelog format).

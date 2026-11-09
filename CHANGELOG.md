@@ -13,6 +13,7 @@ The format is based on
 
 ### Changed
 
+- `AGENTS.md` asks for a CHANGELOG entry on non-trivial changes (#25).
 - README states the ralph-loop template self-improvement intent and
   current status; intent detail moves to `docs/UserStory.md` (#23).
 - README rewritten to the estate doc-structure canon (#22).
