@@ -7,6 +7,10 @@ The format is based on
 
 ## [Unreleased]
 
+### Security
+
+- `actions/checkout` in `ralphy-weekly.yaml` pinned to a full commit SHA (`@v7` → `3d3c42e5aac5ba805825da76410c181273ba90b1`), matching the repository's Actions policy requiring full-length SHA pins.
+
 ### Fixed
 
 - `config/compound.env` paths can be overridden from the environment (`WORKSPACE_ROOT`, `CLAUDE_HOME` and each variable), instead of hard-coded Codespace paths that do not exist on Actions runners; `docs/configuration.md` documents them and the workflow secrets (#21).
@@ -14,6 +18,7 @@ The format is based on
 ### Added
 
 - `CHANGELOG.md` in Keep a Changelog format (#25).
+- `.github/dependabot.yml` `github-actions` entry (weekly), grouping security updates together and version updates (minor/patch only; majors stay ungrouped for individual review).
 
 ### Changed
 
