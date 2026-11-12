@@ -9,7 +9,7 @@ The format is based on
 
 ### Security
 
-- `actions/checkout` in `ralphy-weekly.yaml` pinned to a full commit SHA (`@v7` → `3d3c42e5aac5ba805825da76410c181273ba90b1`), matching the org's Actions policy requiring full-length SHA pins.
+- `actions/checkout` in `ralphy-weekly.yaml` pinned to a full commit SHA (`@v7` → `3d3c42e5aac5ba805825da76410c181273ba90b1`), matching the repository's Actions policy requiring full-length SHA pins.
 
 ### Fixed
 
