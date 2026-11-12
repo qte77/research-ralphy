@@ -15,7 +15,7 @@ Check registry/index.json for active repos and their stacks.
 
 ## Selection
 
-Identify the top 3-5 discoveries that would benefit the contrib repos:
+Identify the top 3-5 discoveries that would benefit the ralph-loop template:
 
 - Uncovered CC features that enable new capabilities
 - Community patterns that solve known pain points
@@ -23,6 +23,6 @@ Identify the top 3-5 discoveries that would benefit the contrib repos:
 
 ## Output
 
-Generate docs/PRD.md following the ralph PRD template at ralph/docs/templates/prd.md.template.
+Generate docs/PRD.md following the ralph PRD template at ralph/ralph/docs/templates/prd.md.template.
 Each discovery becomes a story with acceptance criteria and target files.
-Then run: python ralph/scripts/generate_prd_json.py
+Then run: python ralph/ralph/scripts/generate_prd_json.py ../docs/PRD.md
