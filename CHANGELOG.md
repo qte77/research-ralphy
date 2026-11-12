@@ -15,6 +15,7 @@ The format is based on
 
 - `config/compound.env` paths can be overridden from the environment (`WORKSPACE_ROOT`, `CLAUDE_HOME` and each variable), instead of hard-coded Codespace paths that do not exist on Actions runners; `docs/configuration.md` documents them and the workflow secrets (#21).
 - `ralph_run` and `ralph_init_loop` now run inside the `ralph/` submodule (`make -C ralph`), since the included `ralph/Makefile`'s recipes use paths relative to the template's own root, and that root is one level deeper here (`ralph/ralph/scripts/...`) than at the superrepo root; same fix in `config/prd-generation-prompt.md`, which now points `generate_prd_json.py` at the double-nested script with `../docs/PRD.md` so it reads this repo's PRD, not the submodule's own (#24).
+- `.scaffolds/contrib.sh`'s `adapter_validate` no longer ends in `|| true`: it now fails when the target repo's `make validate`/`make test` fails, and errors clearly when neither target exists, instead of silently passing. Added `.scaffolds/contrib.test.sh` (RED-GREEN, no CI wiring yet). The template's own `make validate` always exiting 0 ([template#90](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template/issues/90)) is a separate upstream issue, not fixed here (#24).
 
 ### Added
 
