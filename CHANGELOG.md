@@ -14,6 +14,7 @@ The format is based on
 ### Fixed
 
 - `config/compound.env` paths can be overridden from the environment (`WORKSPACE_ROOT`, `CLAUDE_HOME` and each variable), instead of hard-coded Codespace paths that do not exist on Actions runners; `docs/configuration.md` documents them and the workflow secrets (#21).
+- `ralph_run` and `ralph_init_loop` now run inside the `ralph/` submodule (`make -C ralph`), since the included `ralph/Makefile`'s recipes use paths relative to the template's own root, and that root is one level deeper here (`ralph/ralph/scripts/...`) than at the superrepo root; same fix in `config/prd-generation-prompt.md`, which now points `generate_prd_json.py` at the double-nested script with `../docs/PRD.md` so it reads this repo's PRD, not the submodule's own (#24).
 
 ### Added
 
