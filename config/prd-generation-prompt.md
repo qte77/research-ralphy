@@ -15,7 +15,7 @@ Check registry/index.json for active repos and their stacks.
 
 ## Selection
 
-Identify the top 3-5 discoveries that would benefit the contrib repos:
+Identify the top 3-5 discoveries that would benefit the ralph-loop template:
 
 - Uncovered CC features that enable new capabilities
 - Community patterns that solve known pain points
