@@ -1,7 +1,8 @@
 name: Ralphy Weekly Run
 on:
-  schedule:
-    - cron: '0 12 * * 3'  # Wednesday 12:00 UTC
+  # Schedule disabled until the workflow secrets exist (Refs #24); restore:
+  # schedule:
+  #   - cron: '0 12 * * 3'  # Wednesday 12:00 UTC
   workflow_dispatch:
 
 permissions:
