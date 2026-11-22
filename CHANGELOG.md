@@ -25,6 +25,8 @@ The format is based on
 
 ### Changed
 
+- Claude Code `.claude/settings.json` sets `BASH_MAX_OUTPUT_LENGTH` to `15000` and
+  `CLAUDE_AUTOCOMPACT_PCT_OVERRIDE` to `50` ([docs](https://code.claude.com/docs/en/env-vars))
 - `AGENTS.md` asks for a CHANGELOG entry on non-trivial changes (#25).
 - README states the ralph-loop template self-improvement intent and
   current status; intent detail moves to `docs/UserStory.md` (#23).
